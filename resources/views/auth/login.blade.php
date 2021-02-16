@@ -11,10 +11,11 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
                             <div class="col-md-6">
+                                
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -23,9 +24,28 @@
                                     </span>
                                 @enderror
                             </div>
+                        </div> -->
+                        <div class="form__item" style="max-width: 400px; width: 100%; margin: 0 auto; margin-bottom: 20px;">
+                            <!-- <div class="form__heading">{{ __('Email') }}</div> -->
+                            <div class="form__input login email"><input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Введите email" value="{{ old('email') }}" required autocomplete="email" autofocus></div>
+                            @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                        <div class="form__item" style="max-width: 400px; width: 100%; margin: 0 auto; margin-bottom: 20px;">
+                            <!-- <div class="form__heading">{{ __('Пароль') }}</div> -->
+                            <div class="form__input login password"><input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Введите пароль" required autocomplete="current-password"></div>
+                            @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
 
-                        <div class="form-group row">
+
+                        <!-- <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Пароль') }}</label>
 
                             <div class="col-md-6">
@@ -37,7 +57,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
@@ -53,7 +73,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button button__indigo" style="max-width: 140px; width: 100%;">
                                     {{ __('Войти') }}
                                 </button>
 

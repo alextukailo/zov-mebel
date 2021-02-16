@@ -120,3 +120,44 @@
         background: #281afd;
     }
 }
+
+.form__input.login {
+    display: flex;
+    align-items: center;
+}
+
+.form__input.login input{
+   border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form__input.login.password:before {
+    content: url('../images/icons/padlock.svg');
+    display: block;
+    width: 40px;
+    height: 37px;
+    background-size: 40px;
+    background: var(--colorGrey);
+    border: 0.1rem solid var(--colorGrey);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: .8rem;
+}
+
+.form__input.login.email:before {
+    content: url('../images/icons/user.svg');
+    display: block;
+    width: 40px;
+    height: 37px;
+    background-size: 40px;
+    background: var(--colorGrey);
+    border: 0.1rem solid var(--colorGrey);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: .8rem;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
