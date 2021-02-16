@@ -11322,6 +11322,7 @@ a {
   border-left: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  outline: none;
 }
 
 .form__input.login.password:before {
@@ -11474,6 +11475,10 @@ body {
 .delete-permanently :hover {
   cursor: pointer;
   color: #921925;
+}
+
+.card-body {
+  padding: 4rem 2rem 2rem 2rem !important;
 }
 
 .delete-permanently-show {
