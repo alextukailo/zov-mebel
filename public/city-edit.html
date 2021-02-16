@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать город</title>
+    <link href="css/app.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+   <section class="page">
+       <div class="page__inner">
+           <div class="page__side">
+               <div id="sidebar" class="page__sidebar sidebar">
+                   <div class="sidebar__heading">
+                       <svg  viewBox="0 0 206 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M206 0H0V220H206V0Z" fill="transparent"/>
+                        <path d="M73.6298 108.753C69.1273 110.669 65.7851 112.594 65.7851 112.594L102.727 57L131.061 98.3489C131.061 98.3489 129.514 97.4711 124.466 97.0222C117.385 96.3937 107.547 97.9898 99.881 99.7455C92.2446 101.491 81.1074 105.561 73.6298 108.753Z" fill="#ffffff"/>
+                        <path d="M134.453 103.726L146.532 122.161C146.532 122.161 136.952 120.485 128.621 121.113C120.291 121.742 97.1636 124.256 97.1636 124.256C97.1636 124.256 116.542 114.41 124.248 110.419C131.954 106.449 134.453 103.726 134.453 103.726Z" fill="#ffffff"/>
+                        <path d="M178 169.734L154.873 134.74C154.873 134.74 154.664 139.349 144.251 145.214C133.838 151.08 126.757 154.013 113.21 159.051C99.6728 164.078 85.957 169.944 85.957 169.944L178 169.734Z" fill="#ffffff"/>
+                        <path d="M28 170.153H69.1173C69.1173 170.153 98.8397 158.661 116.056 150.043C131.131 142.501 141.375 135.249 138.836 130.141C136.962 126.37 127.66 126.37 116.542 126.37C107.656 126.37 97.6 127.099 92.3736 126.999C85.2232 126.859 87.5835 126.021 90.0826 124.276C91.9272 122.989 110.066 112.734 114.668 110.03C121.193 106.19 118.625 104.304 115.64 105.212C110.969 106.629 95.914 113.382 80.2942 122.819C64.6644 132.246 53.2099 142.092 44.4628 150.272C35.7058 158.422 28 170.153 28 170.153Z" fill="#ffffff"/>
+                        <path d="M30.291 179.221V175.66C30.291 175.66 62.6512 175.45 66.4 175.45C70.1488 175.45 72.5785 177.426 72.5785 180.129C72.5785 182.852 69.4546 183.83 69.4546 183.83C69.4546 183.83 72.5785 184.818 72.5785 188.02C72.5785 190.184 70.9818 192 66.4 192H30.0826V188.229H59.0414V185.925H41.3289V181.526H59.0414V179.271L30.291 179.221Z" fill="#ffffff"/>
+                        <path d="M110.651 187.75H89.9239V179.161H110.651V187.75ZM117.891 175.291H82.6843C79.0446 175.291 76.0694 178.284 76.0694 181.945V184.977C76.0694 188.638 79.0446 191.631 82.6843 191.631H117.891C121.531 191.631 124.506 188.638 124.506 184.977V181.945C124.506 178.284 121.541 175.291 117.891 175.291Z" fill="#ffffff"/>
+                        <path d="M163.372 181.117H145.66V185.516H163.372V187.82H141.881V178.822L163.372 178.862V181.117ZM173.785 183.421C173.785 183.421 176.919 182.443 176.919 179.72C176.919 177.017 174.489 175.041 170.731 175.041H128.274V191.601H170.731C175.312 191.601 176.919 189.785 176.919 187.621C176.919 184.419 173.785 183.421 173.785 183.421Z" fill="#ffffff"/>
+                    </svg>
+                </div>
+                <div class="sidebar__group">
+                    <a href="{{route('users.index')}}" class="sidebar__item">Пользователи</a>
+                    <a href="{{route('cities.index')}}" class="sidebar__item">Города</a>
+                    <a href="{{route('salons.index')}}" class="sidebar__item">Салоны</a>
+
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                    <a href="#" class="sidebar__item">Элемент</a>
+                </div>
+               </div>
+            </div>
+            <div class="page__main">
+                <div class="page__header header">
+                    <div class="header__nav nav">
+                        <div id="nav_control" class="nav__button"><span></span><span></span><span></span></div>
+                        <a href="/" class="nav__item">Главная</a>
+                        <a href="{{route('users.index')}}" class="nav__item">Пользователи</a>
+                    </div>
+                    <div class="header__user">
+                        <div class="header__role">Admin (Administrator)</div>
+                        <a href="{{ url('/logout') }}" class="header__logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Выйти <i class="fa fa-sign-out"></i></a>
+                    </div>
+                   
+                 </div>
+                <div class="page__content">
+                    <div class="container">
+                        <!-- контент страницы -->
+                        <div class="card">
+                            <div class="card__title">Редактирование города</div>
+                            <div class="card__head">
+                                <a href="{{ url('/admin/users') }}" title="Все пользователи" class="button button__green button__page">Назад</a>
+                            </div>
+                            <form class="form" action="">
+                                <div class="form__item">
+                                    <div class="form__heading">Название города</div>
+                                    <div class="form__input"><input type="text" name=""></div>
+                                </div>
+                                
+                                <div class="form__buttons">
+                                    <button class="button button__indigo">Сохранить</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- конец контента страницы -->
+                    </div>
+                </div>
+            </div>
+            <footer class="footer-app">
+                <div class="container">
+                    <div class="footer-app__content">
+                        © <span id="currentYear"></span>. ЗОВ
+                    </div>
+                </div>
+            </footer>
+       </div>
+   </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+<script src="js/custom.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.8.1/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: '.crud-richtext'
+    });
+</script>
+</html>
+
+
+
+

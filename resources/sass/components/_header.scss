@@ -1,0 +1,62 @@
+.header {
+    position: fixed;
+    width: calc(100% - 256px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff !important;
+    padding: 1.5rem 0;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 7%), 0 8px 12px 0 rgb(0 0 0 / 10%);
+    
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__role {
+        margin: 0 1.5rem;
+        color: rgba(0,0,21,.5);
+    }
+
+    &__logout {
+        display: block;
+        position: relative;
+        margin: 0 1.5rem;
+        color: rgba(0,0,21,.5);
+    }
+    
+    .nav {
+        display: flex;
+        align-items: center;
+    
+
+        &__button {
+            display: block;
+            padding: .5rem 1.5rem;
+            cursor: pointer;
+            span {
+                display: block;
+                width: 2.5rem;
+                height: .2rem;
+                background: rgba(0,0,21,.5);
+                margin-bottom: .5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__item {
+            margin: 0 1.5rem;
+            color: rgba(0,0,21,.5);
+        }
+
+    }
+}
+
+.header.pagelg {
+    width: 100% !important;
+}

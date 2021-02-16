@@ -1,0 +1,134 @@
+
+ html {
+    font-size: 62.5%;
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #3c4b64;
+    margin: 0;
+    padding: 0 !important;
+    background: #FFFFFF;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  .container {
+      max-width: var(--mainWidth);
+  }
+
+  .pagelg.container {
+    max-width: 100%;
+  }
+
+.page {
+
+    &__inner {
+        margin-left: 25.6rem;
+    }
+
+    &__side {
+
+    }
+
+    &__content {
+        background: #EBEDEF ;
+        padding: 1rem;
+        height: calc(100vh - 5rem);
+        overflow-y: scroll;
+        margin-top: 5.6rem;
+        // box-shadow: 0 1px 1px 0 rgba(var(--elevation-base-color),.14),0 2px 1px -1px rgba(var(--elevation-base-color),.12),0 1px 3px 0 rgba(var(--elevation-base-color),.2);
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25.6rem;
+    height: 100vh;
+    background: var(--colorMain);
+    z-index: 99;
+
+    &__heading {
+        max-width: 4.6rem;
+        margin: 0 auto;
+        padding: 0.4rem 0;
+
+        svg {
+           width: 100%; 
+        }
+    }
+
+    &__item {
+        display: block;
+        color: var(--colorWhite);
+        padding: 1.3rem 2rem; 
+        text-decoration: none;
+        text-transform: none;
+        transition: .3s all;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--colorIndigo);
+            color: var(--colorWhite);
+            text-decoration: none;
+        }
+    }
+
+    &__group {
+        background: #3C4B64;
+    }
+}
+
+.page__inner.pagelg {
+    margin: 0 !important;
+}
+
+.card {
+    margin: 2rem 0;
+    border-radius: .2rem;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+
+    &__title {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+}
+
+.button__change {
+    font-size: 17px;
+}
+
+.badge-success-custom {
+    background: var(--colorIndigo);
+    color: var(--colorWhite);
+}
+
+.badge-show {
+    background: var(--colorGreen);
+    color: var(--colorWhite);
+}
+

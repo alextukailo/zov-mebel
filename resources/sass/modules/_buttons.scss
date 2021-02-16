@@ -1,0 +1,103 @@
+.button {
+    width: fit-content;
+    padding: 0.7rem 1.4rem;
+    padding-top: .5rem;
+    font-size: inherit;
+    line-height: 1.5;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: .5rem;
+
+    &:hover {
+        text-decoration: none;
+        color: var(--colorWhite);
+    }
+
+    &__page {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        // margin-left: 1.3rem;
+    }
+    
+    &__indigo {
+        background: var(--colorIndigo);
+        color: var(--colorWhite);
+        border: .1rem solid var(--colorIndigo);
+
+        &_ghost {
+            color: var(--colorIndigo);
+            border: .1rem solid var(--colorIndigo);
+            background: transparent;
+
+            &:hover {
+                text-decoration: none;
+                background: #281afd;
+                color: var(--colorWhite);
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: #281afd;
+        }
+    }
+
+    &__green {
+        background: var(--colorGreen);
+        color: var(--colorWhite);
+        border: .1rem solid var(--colorGreen);
+
+        &_ghost {
+            color: var(--colorGreen);
+            border: .1rem solid var(--colorGreen);
+            background: transparent;
+
+            &:hover {
+                text-decoration: none;
+                background: #26994d;
+                color: var(--colorWhite);
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: #26994d;
+        }
+    }
+
+    &__red {
+        background: var(--colorRed);
+        color: var(--colorWhite);
+        border: .1rem solid var(--colorRed);
+
+        &_ghost {
+            color: var(--colorRed);
+            border: .1rem solid var(--colorRed);
+            background: transparent;
+
+            &:hover {
+                text-decoration: none;
+                background: red;
+                color: var(--colorWhite);
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: red;
+        }
+    }
+
+    &__show {
+        width: fit-content;
+        font-size: 1.7rem;
+        color: var(--colorWhite);
+
+        &:hover {
+            color: var(--colorWhite);
+        }
+    }
+}

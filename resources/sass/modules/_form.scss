@@ -1,0 +1,122 @@
+.form {
+    max-width: var(--mainWidth);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.3rem;
+
+    &__item {
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        font-size: 1.4rem;
+        color: inherit;
+        margin-bottom: 1rem;
+    }
+
+    &__input {
+
+        input {
+            width: 100%;
+            padding: .7rem;
+            color: #5c6873;
+            border-radius: .3rem;
+            border: .1rem solid var(--colorGrey);
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+.form__input.password {
+    position: relative;
+    
+    input {
+        padding-right: 10rem;
+    }
+}
+
+.select {
+    position: relative;
+    &__head {
+        position: relative;
+        width: 100%;
+        padding: .7rem;
+        color: #5c6873;
+        border-radius: .3rem;
+        border: .1rem solid var(--colorGrey);
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+            background: url('../images/icons/arrow-down.svg');
+            width: 1.5rem;
+            height: 1.5rem;
+            background-size: cover;
+            transition: all .3s;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        // bottom: -35px;
+        padding: 0;
+        list-style: none;
+        background: var(--colorWhite);
+        border-radius: .3rem;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 7%), 0 8px 12px 0 rgb(0 0 0 / 10%);
+    }
+
+    &__item {
+        display: block;
+        padding: .7rem 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+            background: #ebedef;
+        }
+    }
+}
+
+.open.select__head:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%) rotate(180deg);
+        background: url('../images/icons/arrow-down.svg');
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: cover;
+        
+}
+
+.form-control {
+    height: auto !important;
+    padding: .6rem;
+    font-size: inherit;
+}
+
+.btn {
+    padding: .5rem 1.5rem;
+    background: var(--colorIndigo);
+
+    &:hover {
+        background: #281afd;
+    }
+}
