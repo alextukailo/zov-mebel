@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Редактировать салон</title>
+    <title>Города</title>
     <link href="css/app.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,38 +51,50 @@
                     <div class="container">
                         <!-- контент страницы -->
                         <div class="card">
-                            <div class="card__title">Редактировать салон</div>
+                            <div class="card__title">Города</div>
                             <div class="card__head">
-                                <a href="{{ url('/admin/users') }}" title="Все пользователи" class="button button__green button__page">Назад</a>
-                            </div>
-                            <form class="form" action="">
-                                <div class="form__item">
-                                    <div class="form__heading">Название салона</div>
-                                    <div class="form__input"><input type="text" name=""></div>
-                                </div>
-                                <div class="form__item">
-                                    <div class="form__heading">Город</div>
-                                    <div class="select">
-                                        <input class="select__input" value="" name="" type="hidden">
-                                        <div class="select__head">Выберите город</div>
-                                            <ul class="select__list" style="display: none;">
-                                              <li class="select__item" data-value="1">Гродно</li>
-                                              <li class="select__item" data-value="2">Минск</li>
-                                              <li class="select__item" data-value="3">Витебск</li>
-                                              <li class="select__item" data-value="4">Могилев</li>
-                                              <li class="select__item" data-value="5">Гомель</li>
-                                              <li class="select__item" data-value="7">Брест</li>
-                                            </ul>
+                                <button class="button button__indigo button__page">+ Добавить</button>
+                                <form method="get" action="/admin/users" class="form-inline my-2 my-lg-0 float-right">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="{{Request::get('search')}}" name="search" placeholder="Искать...">
+                                        <span class="input-group-append">
+                                                    <button class="btn btn-secondary" type="submit">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </span>
                                     </div>
-                                </div>
-                                <div class="form__item">
-                                    <div class="form__heading">Адрес салона</div>
-                                    <div class="form__input"><input type="text" name=""></div>
-                                </div>
-                                <div class="form__buttons">
-                                    <button class="button button__indigo">Сохранить</button>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                        <tr>
+                                            <th class="font-weight-bold" style="vertical-align: middle; overflow: hidden;"><div>Id</div>
+                                            </th>
+                                            <th class="font-weight-bold" style="vertical-align: middle; overflow: hidden;"><div>Название</div>
+                                            </th>
+                                            <th class="" style="vertical-align: middle; overflow: hidden;"><div>Операции</div>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="position-relative" style="cursor: pointer;">
+                                            <tr tabindex="0">
+                                                <td class="">1</td>
+                                                <td class="font-weight-bold">Гродно</td>
+                                                <td>
+                                                    <span class="button__change badge badge-success-custom"><i aria-hidden="true" class="fa fa-pencil-square-o"></i></span>
+                                                    <span class="button__change badge badge-danger"><i aria-hidden="true" class="fa fa-trash-o"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr tabindex="0">
+                                                <td class="">2</td>
+                                                <td class="font-weight-bold">Минск</td>
+                                                <td>
+                                                    <span class="button__change badge badge-success-custom"><i aria-hidden="true" class="fa fa-pencil-square-o"></i></span>
+                                                    <span class="button__change badge badge-danger"><i aria-hidden="true" class="fa fa-trash-o"></i></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                            </table>
                         </div>
                         <!-- конец контента страницы -->
                     </div>

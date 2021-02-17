@@ -161,4 +161,42 @@
 
 .form-check-label {
     margin-left: 5px;
+    color: var(--colorIndigo);
+    cursor: pointer;
+}
+
+.filter.select {
+    margin-right: 1.5rem;
+
+    .select__head {
+        padding-right: 3rem;
+    }
+
+    .select__item {
+        font-size: 1.2rem;
+    }
+}
+
+.request_link {
+    color: var(--colorIndigo);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.request_header {
+    background: var(--colorIndigo);
+    color: var(--colorWhite);
+    font-size: 1.4rem;
+}
+
+table {
+    font-size: 1.2rem; 
+}
+
+thead {
+    font-size: 1.4rem;
+}
+
+.filter.card__head {
+    margin-bottom: 1.5rem;
 }

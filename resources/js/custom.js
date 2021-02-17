@@ -1,4 +1,6 @@
 const { css } = require("jquery");
+import requests from "./components/requsts"
+import datepickerConfig from './components/datepickerConfg'
 
 $("body").on('click', '.show-hide-password', function () {
    if($(this).data('state') === 'show'){
@@ -118,9 +120,23 @@ let selectComponent = () => {
             $(this).parent().fadeOut();
             $(this).parent().prev().text($(this).text());
             $(this).parent().prev().prev().val($(this).data("value"));
+
         });
-    
-        
+
+        $('.select').on('click', '.select__value', function () {
+            let data = () => {
+                $(this).parent().prev().text($(this).val());
+                $(this).parent().prev().prev().val($(this).val());
+            } 
+            $('.apply-btn').click(function () {
+                data()
+            });
+        });
+
+        $('.select').on('input', '.select__value', function () {
+            $(this).parent().prev().text($(this).val());
+            $(this).parent().prev().prev().val($(this).val());
+        });
     
         $(document).click(function (e) {
             if (!$(e.target).closest('.select').length) {
@@ -133,34 +149,23 @@ let selectComponent = () => {
 
 selectComponent()
 
-let displayPassword = () => {
-    let button = document.getElementsByClassName('pass_display'),
-    input = document.getElementsByClassName('input_pass')
 
-    function show() {
-        var p = document.getElementById('input_pass');
-        p.setAttribute('type', 'text');
-      }
-      
-      function hide() {
-        var p = document.getElementById('input_pass');
-        p.setAttribute('type', 'password');
-      }
-      
-      function showHide() {
-        var pwShown = 0;
-      
-        document.getElementById("pass_display").addEventListener("click", function() {
-          if (pwShown == 0) {
-            pwShown = 1;
-            show();
-          } else {
-            pwShow = 0;
-            hide();
-          }
-        }, false);
-      }
-      showHide()
+let activeMenuItem = () => {
+    let menues = document.getElementsByClassName('sidebar__item')
+    menues = [].slice.call(menues)
+
+    menues.map(menu => {
+        let path = window.location.pathname,
+            route = menu.dataset.route
+
+        if(route == path || route + '.html' == path) {
+            menu.classList.add("active")
+        }
+    })
 }
-// displayPassword()
+activeMenuItem()
 
+
+
+requests()
+datepickerConfig()

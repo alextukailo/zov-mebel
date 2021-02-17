@@ -270,3 +270,22 @@ body {
     color: red;
     cursor: pointer;
 }
+
+.active.sidebar__item {
+    background: hsla(0,0%,100%,.05);
+}
+
+.warning.request_status {
+    background-color: #FEE3E2 !important;
+}
+
+.table {
+    color: inherit !important;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 85%;
+    font-weight: 600;
+}
