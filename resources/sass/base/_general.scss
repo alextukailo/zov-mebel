@@ -13,7 +13,7 @@
     color: #3c4b64;
     margin: 0;
     padding: 0 !important;
-    background: #FFFFFF;
+    background: #EBEDEF;
     font-weight: 400;
     text-rendering: optimizeLegibility;
   }
@@ -118,10 +118,33 @@
     }
 
     &__login {
+        max-width: 70rem;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -70%);
+        .card {
+            box-shadow: 0 1px 1px 0 rgba(var(--elevation-base-color),.14),0 2px 1px -1px rgba(var(--elevation-base-color),.12),0 1px 3px 0 rgba(var(--elevation-base-color),.2);
+
+        }
+    }
+
+    &__controls {
+        max-width: 40rem;
+        margin: 0 auto;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    &__control {
+        width: 40%;
+        // margin: 0 auto;
+        &:first-child {
+            width: auto;
+        }
     }
 }
 
@@ -201,7 +224,7 @@ body {
 }
 
 .card-body {
-    padding: 4rem 2rem 2rem 2rem !important;
+    padding: 6rem 2rem !important;
 }
 
 .delete-permanently-show{
