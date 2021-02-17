@@ -23,6 +23,13 @@ export default function requests() {
     }
     requestStatus()
 
-
-
+    let singleRequestPage = () => {
+        const sidebar = document.getElementById('sidebar')
+        let path = window.location.pathname
+        console.log(path.match('request'))
+        if(path.match('request')[0] == 'request') {
+            // sidebar.style.display = "none"
+        }
+    }
+    // singleRequestPage()
 }

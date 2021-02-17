@@ -35282,6 +35282,16 @@ function requests() {
   };
 
   requestStatus();
+
+  var singleRequestPage = function singleRequestPage() {
+    var sidebar = document.getElementById('sidebar');
+    var path = window.location.pathname;
+    console.log(path.match('request'));
+
+    if (path.match('request')[0] == 'request') {// sidebar.style.display = "none"
+    }
+  }; // singleRequestPage()
+
 }
 
 /***/ }),
