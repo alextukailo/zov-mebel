@@ -11057,6 +11057,13 @@ a {
   background-color: #fff;
 }
 
+.card__login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .button__change {
   font-size: 17px;
 }
@@ -11069,6 +11076,114 @@ a {
 .badge-show {
   background: var(--colorGreen);
   color: var(--colorWhite);
+}
+
+body {
+  position: relative;
+  padding-bottom: 70px;
+  min-height: 100vh;
+}
+
+.header-login {
+  text-align: center;
+  color: rgba(0, 0, 21, 0.5);
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.help-block {
+  color: #dc3545;
+}
+
+.button-block {
+  margin-top: 15px;
+}
+
+.answer-block {
+  position: relative;
+  display: flex;
+  margin: 7px 0;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.answer-block div.answer-block_item:first-child {
+  margin-right: 5px;
+}
+
+.answer-block_item {
+  width: 50%;
+}
+
+.delete-answer,
+.delete-permanently {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  font-size: 25px;
+  color: #dc3545;
+}
+
+.delete-answer :hover,
+.delete-permanently :hover {
+  cursor: pointer;
+  color: #921925;
+}
+
+.card-body {
+  padding: 4rem 2rem 2rem 2rem !important;
+}
+
+.delete-permanently-show {
+  position: relative;
+}
+
+.show-hide-password {
+  position: absolute;
+  right: 9px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.copy-password {
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+.copied-text {
+  float: right;
+  display: none;
+  color: #28a745;
+}
+
+.checked-salons {
+  margin-top: 30px;
+  display: block;
+}
+
+.checked-salons__item {
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 4px;
+  border-radius: 10px;
+  background: mediumspringgreen;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.checked-salons__delete {
+  color: red;
+  cursor: pointer;
 }
 
 :root {
@@ -11326,7 +11441,7 @@ a {
 }
 
 .form__input.login.password:before {
-  content: url(/images/padlock.svg?72496fed6a615115e318ce37bd2fcc3f);
+  content: url(/images/padlock.svg?bc0dfcf814c32968cf4a15b5471159d0);
   display: block;
   width: 40px;
   height: 37px;
@@ -11419,112 +11534,5 @@ a {
 
 .footer-app {
   border-top: 1px solid #d8dbe0;
-}
-
-body {
-  position: relative;
-  padding-bottom: 70px;
-  min-height: 100vh;
-}
-
-.header-login {
-  text-align: center;
-}
-
-.navbar {
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-
-.help-block {
-  color: #dc3545;
-}
-
-.button-block {
-  margin-top: 15px;
-}
-
-.answer-block {
-  position: relative;
-  display: flex;
-  margin: 7px 0;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-
-.answer-block div.answer-block_item:first-child {
-  margin-right: 5px;
-}
-
-.answer-block_item {
-  width: 50%;
-}
-
-.delete-answer,
-.delete-permanently {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 10px;
-  font-size: 25px;
-  color: #dc3545;
-}
-
-.delete-answer :hover,
-.delete-permanently :hover {
-  cursor: pointer;
-  color: #921925;
-}
-
-.card-body {
-  padding: 4rem 2rem 2rem 2rem !important;
-}
-
-.delete-permanently-show {
-  position: relative;
-}
-
-.show-hide-password {
-  position: absolute;
-  right: 9px;
-  top: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.copy-password {
-  position: absolute;
-  right: 35px;
-  top: 10px;
-  font-size: 14px !important;
-  cursor: pointer;
-}
-
-.copied-text {
-  float: right;
-  display: none;
-  color: #28a745;
-}
-
-.checked-salons {
-  margin-top: 30px;
-  display: block;
-}
-
-.checked-salons__item {
-  display: inline-block;
-  border: 1px solid lightgray;
-  padding: 4px;
-  border-radius: 10px;
-  background: mediumspringgreen;
-  font-weight: 500;
-  margin-bottom: 5px;
-  margin-right: 10px;
-}
-
-.checked-salons__delete {
-  color: red;
-  cursor: pointer;
 }
 
