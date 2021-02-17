@@ -11335,7 +11335,7 @@ a {
   border: 0.1rem solid var(--colorGrey);
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  padding: 0.8rem;
+  padding: 1rem;
 }
 
 .form__input.login.email:before {
@@ -11348,7 +11348,7 @@ a {
   border: 0.1rem solid var(--colorGrey);
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  padding: 0.8rem;
+  padding: 1rem;
 }
 
 .form-check-label {
