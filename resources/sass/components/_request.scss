@@ -56,41 +56,74 @@
     }
 
     &__controls {
+        position: relative;
         display: flex;
         justify-content: space-between;
         margin-top: 4rem;
         margin-bottom: 1.5rem;
+        padding: 0 1rem;
     }
 
     &_send {
-        width: 80%;
+        max-width: 50rem;
+        width: 100%;
+    }
+
+    &_upload {
+        display: block;
+        max-width: 100%;
+        width: 15.5rem !important;
+        text-align: center;
+        margin: 0;
+        white-space: nowrap;
     }
 
 }
 
 .chat {
-    background: #fafafa;
+    background: #fafafa url(../images/icons/logo-zov.svg) no-repeat;
+    background-size: contain;
+    background-position: center center;
     padding: 2rem;
-    height: 40rem;
+    height: 7vh;
     overflow-y: scroll;
+
+    @media(min-width: 1440px) {
+        height: 50vh;   
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     &__message {
         max-width: 70%;
         width: 100%;
         padding: 1.5rem 1rem;
-        padding-right: 6rem;
+        padding-left: 6rem;
         background: #E3E9F0;
-        border-radius: .7rem;
+        border-radius: 1.5rem;
         border-bottom-left-radius: 0;
         margin-bottom: 2rem;
-    }
+     }
 }
 
 .incoming.chat__message {
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 6rem;
-    background: #D9F3D5;
-    border-bottom-left-radius: .7rem;
-    border-bottom-right-radius: 0;
+        background: #D9F3D5;
+        padding-right: 6rem;
+        padding-left: 2rem;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 0;
+        margin-left: auto;
+}
+
+#imagePreview {
+    position: absolute;
+    top: -74px;
+    right: 12px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

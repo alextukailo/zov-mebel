@@ -10975,7 +10975,7 @@ a {
 }
 
 .container {
-  max-width: var(--mainWidth);
+  max-width: 100%;
 }
 
 .pagelg.container {
@@ -10987,11 +10987,12 @@ a {
 }
 
 .page__content {
+  position: relative;
   background: #EBEDEF;
   padding: 1rem;
-  height: calc(100vh - 5rem);
+  height: calc(97vh - 1rem);
   overflow-y: scroll;
-  margin-top: 5.6rem;
+  padding-top: 5.6rem;
 }
 
 .page__content::-webkit-scrollbar {
@@ -11232,6 +11233,10 @@ body {
   font-weight: 600;
 }
 
+.mce-panel {
+  border: none !important;
+}
+
 :root {
   --colorMain: #303C54;
   --colorIndigo: #5a50fa;
@@ -11262,6 +11267,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   margin-right: 0.5rem;
+  transition: all 0.3s;
 }
 
 .button:hover {
@@ -11528,6 +11534,7 @@ body {
 }
 
 .filter.select .select__head {
+  white-space: nowrap;
   padding: 0.3rem;
   padding-right: 3rem;
 }
@@ -12138,41 +12145,76 @@ thead {
 }
 
 .messenger__controls {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
+  padding: 0 1rem;
 }
 
 .messenger_send {
-  width: 80%;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.messenger_upload {
+  display: block;
+  max-width: 100%;
+  width: 15.5rem !important;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .chat {
-  background: #fafafa;
+  background: #fafafa url(/images/logo-zov.svg?d9780e0949807c5576a786054f71cd57) no-repeat;
+  background-size: contain;
+  background-position: center center;
   padding: 2rem;
-  height: 40rem;
+  height: 7vh;
   overflow-y: scroll;
+}
+
+@media (min-width: 1440px) {
+  .chat {
+    height: 50vh;
+  }
+}
+
+.chat::-webkit-scrollbar {
+  display: none;
 }
 
 .chat__message {
   max-width: 70%;
   width: 100%;
   padding: 1.5rem 1rem;
-  padding-right: 6rem;
+  padding-left: 6rem;
   background: #E3E9F0;
-  border-radius: 0.7rem;
+  border-radius: 1.5rem;
   border-bottom-left-radius: 0;
   margin-bottom: 2rem;
 }
 
 .incoming.chat__message {
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 6rem;
   background: #D9F3D5;
-  border-bottom-left-radius: 0.7rem;
+  padding-right: 6rem;
+  padding-left: 2rem;
+  border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 0;
+  margin-left: auto;
+}
+
+#imagePreview {
+  position: absolute;
+  top: -74px;
+  right: 12px;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-app {
