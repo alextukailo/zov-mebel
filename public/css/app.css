@@ -11543,6 +11543,7 @@ body {
 
 .filter.select .select__item {
   font-size: 1.2rem;
+  color: #5c6873 !important;
 }
 
 .request_link {
@@ -12103,12 +12104,13 @@ thead {
 }
 
 .request__sidebar {
-  width: 60rem;
-  border-right: 0.1rem solid var(--colorGrey);
+  display: table;
+  width: 35rem;
   border-top: 0.1rem solid var(--colorGrey);
 }
 
 .request__title {
+  font-size: 1.4rem;
   margin: 2.5rem 0 1.5rem 0;
   padding: 0 1rem;
 }
@@ -12125,10 +12127,12 @@ thead {
 }
 
 .side-item__heading {
+  font-size: 1.2rem;
   margin-right: 1rem;
 }
 
 .side-item__value {
+  font-size: 1.2rem;
   color: var(--colorIndigo);
   font-weight: 500;
 }
@@ -12139,6 +12143,7 @@ thead {
 
 .messenger {
   width: 100%;
+  border-left: 0.1rem solid var(--colorGrey);
 }
 
 .messenger__chat {
@@ -12190,25 +12195,42 @@ thead {
 }
 
 .chat__message {
+  position: relative;
   max-width: 70%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1.5rem;
   padding-left: 6rem;
+  padding-bottom: 3.5rem;
   background: #E3E9F0;
   border-radius: 1.5rem;
   border-bottom-left-radius: 0;
   margin-bottom: 2rem;
 }
 
-.incoming.chat__message {
+.chat__time {
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(0, 0, 21, 0.5);
+}
+
+.mine.chat__message {
   background: #D9F3D5;
   padding-right: 6rem;
   padding-left: 2rem;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 0;
   margin-left: auto;
+}
+
+.mine.chat__message .chat__time {
+  bottom: 5px;
+  left: initial;
+  right: 1rem;
 }
 
 #imagePreview {

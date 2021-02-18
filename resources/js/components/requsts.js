@@ -58,7 +58,6 @@ export default function requests() {
         const allowedExtensions =  ['jpg','png','svg'],
             sizeLimit = 10000000; 
 
-        
         const { name:fileName, size:fileSize } = this.files[0];
 
         const fileExtension = fileName.split(".").pop();
@@ -66,7 +65,6 @@ export default function requests() {
         if(!allowedExtensions.includes(fileExtension)){
             fileNameOutput.textContent = fileName
             fileTypeOutput.textContent = fileExtension
-            // fileSizeOutput.textContent = fileSize
 
             this.value = null;
         }else if(fileSize > sizeLimit){

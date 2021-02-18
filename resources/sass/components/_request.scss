@@ -6,13 +6,15 @@
     }
 
     &__sidebar {
-        width: 60rem;
-        border-right: .1rem solid var(--colorGrey);
+        display: table;
+        width: 35rem;
+        
         border-top: .1rem solid var(--colorGrey);
         
     } 
     
     &__title {
+        font-size: 1.4rem;
         margin: 2.5rem 0 1.5rem 0;
         padding: 0 1rem;
     }
@@ -31,10 +33,12 @@
     }
 
     &__heading {
+        font-size: 1.2rem;
         margin-right: 1rem;
     }
 
     &__value {
+        font-size: 1.2rem;
         color: var(--colorIndigo);
         font-weight: 500;
 
@@ -46,6 +50,7 @@
 
 .messenger {
     width: 100%;
+    border-left: .1rem solid var(--colorGrey);
     &__chat {
         min-height: 40rem;
         border: .1rem solid var(--colorGrey);
@@ -98,24 +103,41 @@
     }
 
     &__message {
+        position: relative;
         max-width: 70%;
         width: fit-content;
         padding: 1.5rem;
         padding-left: 6rem;
+        padding-bottom: 3.5rem;
         background: #E3E9F0;
         border-radius: 1.5rem;
         border-bottom-left-radius: 0;
         margin-bottom: 2rem;
      }
+
+     &__time {
+        position: absolute;
+        bottom: 5px;
+        left: 8px;
+        font-size: 1.1rem;
+        font-style: italic;
+        color: rgba(0, 0, 21, 0.5);
+     }
 }
 
-.incoming.chat__message {
+.mine.chat__message {
         background: #D9F3D5;
         padding-right: 6rem;
         padding-left: 2rem;
         border-bottom-left-radius: 1.5rem;
         border-bottom-right-radius: 0;
         margin-left: auto;
+}
+
+.mine.chat__message .chat__time {
+    bottom: 5px;
+    left: initial;
+    right: 1rem;
 }
 
 #imagePreview {

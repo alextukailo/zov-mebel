@@ -35324,8 +35324,7 @@ function requests() {
 
     if (!allowedExtensions.includes(fileExtension)) {
       fileNameOutput.textContent = fileName;
-      fileTypeOutput.textContent = fileExtension; // fileSizeOutput.textContent = fileSize
-
+      fileTypeOutput.textContent = fileExtension;
       this.value = null;
     } else if (fileSize > sizeLimit) {// this.value = null;
     }
