@@ -83,12 +83,28 @@ $('#salons ').on('change', function () {
 
 
 let handleControlSidebar = () => {
-    $('#nav_control').click(function(){
+    
+    
+    var clickState = 0;
+    var btn = document.getElementById('nav_control');
+
+    btn.addEventListener('click', function(){
         $('.sidebar').fadeToggle("fast")
         $('.page__inner').toggleClass("pagelg")
         $('.container').toggleClass("pagelg")
         $('.header').toggleClass("pagelg")
+        
+
+         if (clickState == 0) {
+            sessionStorage.removeItem("stateSidebar");
+            clickState = 1;
+        } else {
+            sessionStorage.setItem('stateSidebar', 'hidden')
+            clickState = 0;
+        }
+
     });
+
 }
 handleControlSidebar()
 
@@ -165,7 +181,24 @@ let activeMenuItem = () => {
 }
 activeMenuItem()
 
+let rememberState = function() {
+        
+    let sessionlVal = sessionStorage.getItem('stateSidebar')
+    if (sessionlVal != 'hidden') {
+        $('.sidebar').fadeOut("fast")
+        $('.page__inner').toggleClass("pagelg")
+        $('.container').toggleClass("pagelg")
+        $('.header').toggleClass("pagelg")
+    } else {
+        $('.sidebar').fadeIn("fast")
+        $('.page__inner').removeClass("pagelg")
+        $('.container').removeClass("pagelg")
+        $('.header').removeClass("pagelg")
+    }
+    console.log(sessionlVal)
+}
 
+rememberState()
 
 requests()
 datepickerConfig()

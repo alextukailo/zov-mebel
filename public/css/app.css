@@ -12105,7 +12105,7 @@ thead {
 
 .request__sidebar {
   display: table;
-  width: 35rem;
+  width: 34rem;
   border-top: 0.1rem solid var(--colorGrey);
 }
 
@@ -12200,6 +12200,7 @@ thead {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: 1.2rem;
   padding-top: 1.5rem;
   padding-right: 6rem;
   padding-left: 2rem;

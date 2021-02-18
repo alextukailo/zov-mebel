@@ -35428,11 +35428,21 @@ $('#salons ').on('change', function () {
 });
 
 var handleControlSidebar = function handleControlSidebar() {
-  $('#nav_control').click(function () {
+  var clickState = 0;
+  var btn = document.getElementById('nav_control');
+  btn.addEventListener('click', function () {
     $('.sidebar').fadeToggle("fast");
     $('.page__inner').toggleClass("pagelg");
     $('.container').toggleClass("pagelg");
     $('.header').toggleClass("pagelg");
+
+    if (clickState == 0) {
+      sessionStorage.removeItem("stateSidebar");
+      clickState = 1;
+    } else {
+      sessionStorage.setItem('stateSidebar', 'hidden');
+      clickState = 0;
+    }
   });
 };
 
@@ -35506,6 +35516,26 @@ var activeMenuItem = function activeMenuItem() {
 };
 
 activeMenuItem();
+
+var rememberState = function rememberState() {
+  var sessionlVal = sessionStorage.getItem('stateSidebar');
+
+  if (sessionlVal != 'hidden') {
+    $('.sidebar').fadeOut("fast");
+    $('.page__inner').toggleClass("pagelg");
+    $('.container').toggleClass("pagelg");
+    $('.header').toggleClass("pagelg");
+  } else {
+    $('.sidebar').fadeIn("fast");
+    $('.page__inner').removeClass("pagelg");
+    $('.container').removeClass("pagelg");
+    $('.header').removeClass("pagelg");
+  }
+
+  console.log(sessionlVal);
+};
+
+rememberState();
 Object(_components_requsts__WEBPACK_IMPORTED_MODULE_0__["default"])();
 Object(_components_datepickerConfg__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
