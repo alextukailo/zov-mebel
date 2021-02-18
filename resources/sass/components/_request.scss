@@ -81,6 +81,7 @@
 }
 
 .chat {
+    width: 100%;
     background: #fafafa url(../images/icons/logo-zov.svg) no-repeat;
     background-size: contain;
     background-position: center center;
@@ -98,8 +99,8 @@
 
     &__message {
         max-width: 70%;
-        width: 100%;
-        padding: 1.5rem 1rem;
+        width: fit-content;
+        padding: 1.5rem;
         padding-left: 6rem;
         background: #E3E9F0;
         border-radius: 1.5rem;
@@ -126,4 +127,14 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.fileNmaeOutput {
+    width: 100%;
+    position: absolute;
+    top: -28px;
+    right: 12px;
+    width: auto;
+    height: 70px;
+    white-space: nowrap;
 }

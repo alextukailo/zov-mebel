@@ -35262,8 +35262,8 @@ __webpack_require__.r(__webpack_exports__);
 function requests() {
   var requestStatus = function requestStatus() {
     var items = document.getElementsByClassName('request_status');
-    items = [].slice.call(items);
-    console.log(items);
+    items = [].slice.call(items); // console.log(items)
+
     items.map(function (item) {
       var status = item.dataset.status;
 
@@ -35298,7 +35298,7 @@ function requests() {
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        console.log(e.target.result);
+        // console.log(e.target.result)
         $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
         $('#imagePreview').hide();
         $('#imagePreview').fadeIn(650);
@@ -35311,6 +35311,27 @@ function requests() {
   $("#fileUpload").change(function () {
     readURL(this);
   });
+
+  function validateFile() {
+    var fileNameOutput = document.getElementById('fileNameOutput');
+    var fileTypeOutput = document.getElementById('fileTypeOutput');
+    var allowedExtensions = ['jpg', 'png', 'svg'],
+        sizeLimit = 10000000;
+    var _this$files$ = this.files[0],
+        fileName = _this$files$.name,
+        fileSize = _this$files$.size;
+    var fileExtension = fileName.split(".").pop();
+
+    if (!allowedExtensions.includes(fileExtension)) {
+      fileNameOutput.textContent = fileName;
+      fileTypeOutput.textContent = fileExtension; // fileSizeOutput.textContent = fileSize
+
+      this.value = null;
+    } else if (fileSize > sizeLimit) {// this.value = null;
+    }
+  }
+
+  document.getElementById("fileUpload").addEventListener("change", validateFile);
 }
 
 /***/ }),

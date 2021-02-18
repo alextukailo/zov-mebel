@@ -3,7 +3,7 @@ export default function requests() {
     let requestStatus = () => {
         let items = document.getElementsByClassName('request_status')
         items = [].slice.call(items)
-        console.log(items)
+        // console.log(items)
 
         items.map(item => {
             let status = item.dataset.status
@@ -37,7 +37,7 @@ export default function requests() {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
-                console.log(e.target.result)
+                // console.log(e.target.result)
                 $('#imagePreview').css('background-image', 'url('+e.target.result +')');
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
@@ -49,5 +49,30 @@ export default function requests() {
         readURL(this);
     });
 
+    
+
+   function validateFile() {
+        let fileNameOutput = document.getElementById('fileNameOutput')
+        let fileTypeOutput = document.getElementById('fileTypeOutput')
+
+        const allowedExtensions =  ['jpg','png','svg'],
+            sizeLimit = 10000000; 
+
+        
+        const { name:fileName, size:fileSize } = this.files[0];
+
+        const fileExtension = fileName.split(".").pop();
+
+        if(!allowedExtensions.includes(fileExtension)){
+            fileNameOutput.textContent = fileName
+            fileTypeOutput.textContent = fileExtension
+            // fileSizeOutput.textContent = fileSize
+
+            this.value = null;
+        }else if(fileSize > sizeLimit){
+            // this.value = null;
+        }
+    }
+    document.getElementById("fileUpload").addEventListener("change", validateFile)
 
 }

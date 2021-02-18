@@ -11436,7 +11436,9 @@ body {
 }
 
 .select__list {
-  width: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   left: 0;
   padding: 0;
@@ -12168,6 +12170,7 @@ thead {
 }
 
 .chat {
+  width: 100%;
   background: #fafafa url(/images/logo-zov.svg?d9780e0949807c5576a786054f71cd57) no-repeat;
   background-size: contain;
   background-position: center center;
@@ -12188,8 +12191,10 @@ thead {
 
 .chat__message {
   max-width: 70%;
-  width: 100%;
-  padding: 1.5rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5rem;
   padding-left: 6rem;
   background: #E3E9F0;
   border-radius: 1.5rem;
@@ -12215,6 +12220,16 @@ thead {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.fileNmaeOutput {
+  width: 100%;
+  position: absolute;
+  top: -28px;
+  right: 12px;
+  width: auto;
+  height: 70px;
+  white-space: nowrap;
 }
 
 .footer-app {
