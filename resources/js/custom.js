@@ -184,11 +184,12 @@ activeMenuItem()
 let rememberState = function() {
         
     let sessionlVal = sessionStorage.getItem('stateSidebar')
-    if (sessionlVal != 'hidden') {
+    if (sessionlVal == 'hidden') {
         $('.sidebar').fadeOut("fast")
-        $('.page__inner').toggleClass("pagelg")
-        $('.container').toggleClass("pagelg")
-        $('.header').toggleClass("pagelg")
+        $('.page__inner').addClass("pagelg")
+        $('.container').addClass("pagelg")
+        $('.header').addClass("pagelg")
+        
     } else {
         $('.sidebar').fadeIn("fast")
         $('.page__inner').removeClass("pagelg")

@@ -11365,6 +11365,10 @@ body {
   margin-left: auto !important;
 }
 
+.button__show {
+  font-size: 85%;
+}
+
 .form {
   max-width: var(--mainWidth);
   display: flex;
