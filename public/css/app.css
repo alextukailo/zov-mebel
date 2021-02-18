@@ -11513,7 +11513,7 @@ body {
 }
 
 .form__input.login.email:before {
-  content: url(/images/user.svg?65fc1372a70fbe2cf9a1e4dfcf1e0b21);
+  content: url(/images/user.svg?6400b9fc79460f943e580dd1edfdb6b7);
   display: block;
   width: 40px;
   height: 37px;
@@ -12200,9 +12200,10 @@ thead {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 1.5rem;
-  padding-left: 6rem;
-  padding-bottom: 3.5rem;
+  padding-top: 1.5rem;
+  padding-right: 6rem;
+  padding-left: 2rem;
+  padding-bottom: 2.8rem;
   background: #E3E9F0;
   border-radius: 1.5rem;
   border-bottom-left-radius: 0;
@@ -12212,7 +12213,8 @@ thead {
 .chat__time {
   position: absolute;
   bottom: 5px;
-  left: 8px;
+  left: initial;
+  right: 1rem;
   font-size: 1.1rem;
   font-style: italic;
   color: rgba(0, 0, 21, 0.5);
