@@ -50,6 +50,7 @@
     &__chat {
         min-height: 40rem;
         border: .1rem solid var(--colorGrey);
+        border-left: none;
     }
 
     &__textarea {
@@ -103,6 +104,7 @@
         max-width: 70%;
         width: fit-content;
         font-size: 1.2rem;
+        letter-spacing: .08rem;
         padding-top: 1.5rem;
         padding-right: 6rem;
         padding-left: 2rem;

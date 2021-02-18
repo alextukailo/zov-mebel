@@ -12149,6 +12149,7 @@ thead {
 .messenger__chat {
   min-height: 40rem;
   border: 0.1rem solid var(--colorGrey);
+  border-left: none;
 }
 
 .messenger__controls {
@@ -12201,6 +12202,7 @@ thead {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 1.2rem;
+  letter-spacing: 0.08rem;
   padding-top: 1.5rem;
   padding-right: 6rem;
   padding-left: 2rem;
