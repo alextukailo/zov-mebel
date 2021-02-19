@@ -35331,8 +35331,6 @@ function requests() {
     } else if (fileSize > sizeLimit) {// this.value = null;
     }
   }
-
-  document.getElementById("fileUpload").addEventListener("change", validateFile);
 }
 
 /***/ }),

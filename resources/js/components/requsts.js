@@ -53,7 +53,7 @@ export default function requests() {
 
    function validateFile() {
         let fileOutput = document.getElementById('fileOutput')
-
+        
         // const allowedExtensions =  ['jpg','png','svg'],
         const allowedExtensions =  [],
             sizeLimit = 10000000; 
@@ -75,6 +75,6 @@ export default function requests() {
             // this.value = null;
         }
     }
-    document.getElementById("fileUpload").addEventListener("change", validateFile)
+
 
 }
