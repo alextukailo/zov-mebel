@@ -8,7 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'ЗОВ') }}</title>
-
+    <link rel="apple-touch-icon" sizes="180x180" href="https://zovofficial.com/images/icon/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://zovofficial.com/images/icon/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://zovofficial.com/images/icon/favicons/favicon-16x16.png">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

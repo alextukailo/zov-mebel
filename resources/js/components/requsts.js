@@ -38,9 +38,9 @@ export default function requests() {
             var reader = new FileReader();
             reader.onload = function(e) {
                 // console.log(e.target.result)
-                $('#imagePreview').css('background-image', 'url('+e.target.result +')');
-                $('#imagePreview').hide();
-                $('#imagePreview').fadeIn(650);
+                // // $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                // $('#imagePreview').hide();
+                // $('#imagePreview').fadeIn(650);
             }
             reader.readAsDataURL(input.files[0]);
         }
@@ -52,21 +52,25 @@ export default function requests() {
     
 
    function validateFile() {
-        let fileNameOutput = document.getElementById('fileNameOutput')
-        let fileTypeOutput = document.getElementById('fileTypeOutput')
+        let fileOutput = document.getElementById('fileOutput')
 
-        const allowedExtensions =  ['jpg','png','svg'],
+        // const allowedExtensions =  ['jpg','png','svg'],
+        const allowedExtensions =  [],
             sizeLimit = 10000000; 
+            let files = [].slice.call(this.files)
 
         const { name:fileName, size:fileSize } = this.files[0];
 
         const fileExtension = fileName.split(".").pop();
 
         if(!allowedExtensions.includes(fileExtension)){
-            fileNameOutput.textContent = fileName
-            fileTypeOutput.textContent = fileExtension
+            let filesList = files.map(file => {
+                const fileType = file.name.split(".").pop();
+               return '<div><span class="badge mr-1 badge-danger">' + fileType + '</span><span id="fileNameOutput">' + file.name + '</span></div>'
+            })
 
-            this.value = null;
+            fileOutput.innerHTML = filesList.join(' ')
+            
         }else if(fileSize > sizeLimit){
             // this.value = null;
         }

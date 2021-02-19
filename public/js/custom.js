@@ -35297,11 +35297,10 @@ function requests() {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
 
-      reader.onload = function (e) {
-        // console.log(e.target.result)
-        $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
-        $('#imagePreview').hide();
-        $('#imagePreview').fadeIn(650);
+      reader.onload = function (e) {// console.log(e.target.result)
+        // // $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+        // $('#imagePreview').hide();
+        // $('#imagePreview').fadeIn(650);
       };
 
       reader.readAsDataURL(input.files[0]);
@@ -35313,19 +35312,22 @@ function requests() {
   });
 
   function validateFile() {
-    var fileNameOutput = document.getElementById('fileNameOutput');
-    var fileTypeOutput = document.getElementById('fileTypeOutput');
-    var allowedExtensions = ['jpg', 'png', 'svg'],
+    var fileOutput = document.getElementById('fileOutput'); // const allowedExtensions =  ['jpg','png','svg'],
+
+    var allowedExtensions = [],
         sizeLimit = 10000000;
+    var files = [].slice.call(this.files);
     var _this$files$ = this.files[0],
         fileName = _this$files$.name,
         fileSize = _this$files$.size;
     var fileExtension = fileName.split(".").pop();
 
     if (!allowedExtensions.includes(fileExtension)) {
-      fileNameOutput.textContent = fileName;
-      fileTypeOutput.textContent = fileExtension;
-      this.value = null;
+      var filesList = files.map(function (file) {
+        var fileType = file.name.split(".").pop();
+        return '<div><span class="badge mr-1 badge-danger">' + fileType + '</span><span id="fileNameOutput">' + file.name + '</span></div>';
+      });
+      fileOutput.innerHTML = filesList.join(' ');
     } else if (fileSize > sizeLimit) {// this.value = null;
     }
   }
@@ -35532,7 +35534,7 @@ var rememberState = function rememberState() {
     $('.header').removeClass("pagelg");
   }
 
-  console.log(sessionlVal);
+  console.log('sidebar', sessionlVal);
 };
 
 rememberState();

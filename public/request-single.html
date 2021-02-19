@@ -54,8 +54,9 @@
                         <div class="card">
                             <div class="card__title">Заявка № 1</div>
                             <div class="card__head" style="justify-content: flex-start;">
-                                <button class="button button__indigo button__page">Взять в работу</button>
-                                <button class="button button__indigo_ghost button__page">Архивировать</button>
+                                <button class="button button__green_ghost button__page" title="Взять в работу заявку">Взять в работу</button>
+                                <button class="button button__indigo_ghost button__page" title="Архивировать заявку">Архивировать</button>
+                                <button class="button button__red_ghost button__page" title="Отменить заявку">Отменить</button>
                             </div>
                             <div class="request__content">
                                 <div class="request__sidebar">
@@ -170,12 +171,12 @@
                                             <!-- конец сообщений -->
                                     </div>
                                     <div class="messenger__textarea"><textarea class="crud-richtext" name="" id="" cols="30" rows="5"></textarea> </div>
-                                    
+                                    <div id="fileOutput" class="fileNmaeOutput"></div>
                                     <div class="messenger__controls">
                                         <button class="button button__indigo messenger_send">Отправить</button>
-                                        <input class="messenger_attach" type="file" name="" id="fileUpload" style="display: none;">
+                                        <input class="messenger_attach" type="file" multiple name="" id="fileUpload" style="display: none;">
                                         <div id="imagePreview" style="background-image: url();"></div>
-                                        <div class="fileNmaeOutput"><span class="badge mr-1 badge-danger" id="fileTypeOutput"></span><span id="fileNameOutput"></span></div>
+                                        
                                         <label class="button button__green_ghost messenger_upload" for="fileUpload">Загрузить файл</label>
                                     </div>
                                 </div>

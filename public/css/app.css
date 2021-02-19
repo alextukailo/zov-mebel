@@ -12201,7 +12201,7 @@ thead {
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
   padding: 0 1rem;
 }
@@ -12295,13 +12295,19 @@ thead {
 }
 
 .fileNmaeOutput {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  position: absolute;
-  top: -28px;
-  right: 12px;
-  width: auto;
-  height: 70px;
+  margin-top: 2rem;
+}
+
+.fileNmaeOutput div {
   white-space: nowrap;
+  margin: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  background-color: #def7ff;
 }
 
 .footer-app {

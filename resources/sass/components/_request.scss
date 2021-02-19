@@ -61,7 +61,7 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-        margin-top: 4rem;
+        margin-top: 2rem;
         margin-bottom: 1.5rem;
         padding: 0 1rem;
     }
@@ -153,11 +153,22 @@
 }
 
 .fileNmaeOutput {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    position: absolute;
-    top: -28px;
-    right: 12px;
-    width: auto;
-    height: 70px;
-    white-space: nowrap;
+    margin-top: 2rem;
+
+    div {
+        white-space: nowrap;
+        margin: 0 .5rem;
+        margin-bottom: .5rem;
+        padding: .3rem;
+        border-radius: .4rem;
+        background-color: #def7ff;
+    }
+    // position: absolute;
+    // top: -28px;
+    // right: 12px;
+    // width: auto;
+    
 }

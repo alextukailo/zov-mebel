@@ -89,6 +89,7 @@ let handleControlSidebar = () => {
     var btn = document.getElementById('nav_control');
 
     btn.addEventListener('click', function(){
+        
         $('.sidebar').fadeToggle("fast")
         $('.page__inner').toggleClass("pagelg")
         $('.container').toggleClass("pagelg")
@@ -196,7 +197,7 @@ let rememberState = function() {
         $('.container').removeClass("pagelg")
         $('.header').removeClass("pagelg")
     }
-    console.log(sessionlVal)
+    console.log('sidebar', sessionlVal)
 }
 
 rememberState()
