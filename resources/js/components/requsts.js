@@ -71,7 +71,7 @@ export default function requests() {
 
             fileOutput.innerHTML = filesList.join(' ')
             
-        }else if(fileSize > sizeLimit){
+        } else if(fileSize > sizeLimit){
             // this.value = null;
         }
     }

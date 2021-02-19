@@ -11278,6 +11278,80 @@ body {
   border: none !important;
 }
 
+.apply-btn {
+  padding: 5px 13px !important;
+  background: var(--colorIndigo) !important;
+  color: var(--colorWhite) !important;
+  border: 0.1rem solid var(--colorIndigo) !important;
+  top: 3px !important;
+}
+
+.date-picker-wrapper .first-date-selected,
+.date-picker-wrapper .last-date-selected {
+  background-color: var(--colorIndigo) !important;
+  color: #fff !important;
+}
+
+.month-name {
+  color: var(--colorIndigo) !important;
+}
+
+.week-name th {
+  color: var(--colorIndigo);
+  font-size: 1.2rem;
+}
+
+.date-picker-wrapper table .caption .next,
+.date-picker-wrapper table .caption .prev {
+  color: var(--colorIndigo);
+  cursor: pointer;
+}
+
+.date-picker-wrapper .date-range-length-tip {
+  background-color: var(--colorIndigo) !important;
+  color: var(--colorWhite) !important;
+}
+
+.date-picker-wrapper .date-range-length-tip:after {
+  content: "";
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--colorIndigo) !important;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 121px !important;
+  height: 7px !important;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--colorIndigo);
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--colorIndigo);
+  cursor: pointer;
+}
+
+.time1,
+.time2,
+.date-picker-wrapper .drp_top-bar .default-top {
+  color: #3c4b64 !important;
+}
+
 :root {
   --colorMain: #303C54;
   --colorIndigo: #5a50fa;
@@ -11772,7 +11846,7 @@ thead {
 }
 
 .date-picker-wrapper .month-wrapper table .day.checked {
-  background-color: #9cdbf7;
+  background-color: #e6dcff;
 }
 
 .date-picker-wrapper .month-wrapper table .week-name {
@@ -11800,7 +11874,7 @@ thead {
 }
 
 .date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
-  background-color: #cdecfa;
+  background-color: #e6dcff;
 }
 
 .date-picker-wrapper .month-wrapper table .day.nextMonth,
@@ -12031,7 +12105,7 @@ thead {
 
 .date-picker-wrapper .first-date-selected,
 .date-picker-wrapper .last-date-selected {
-  background-color: #49e !important;
+  background-color: var(--colorIndigo) !important;
   color: white !important;
 }
 
@@ -12203,7 +12277,7 @@ thead {
   justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .messenger_send {
