@@ -76,5 +76,7 @@ export default function requests() {
         }
     }
 
+    document.getElementById("fileUpload").addEventListener("change", validateFile)
+    
 
 }
